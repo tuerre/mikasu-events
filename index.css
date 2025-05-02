@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    color: #f0f0f0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    background-image: url('/src/background.webp');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-bg {
+    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+}
+
+header {
+    width: 100%;
+    height: 55px;
+    display: flex;
+    padding: 4px 0;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(5px);
+    border-bottom: 1px solid rgba(77, 77, 77, 0.432);
+}
+
+#navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#navbar ul {
+    display: flex;
+    gap: 20px;
+}
+
+.link-navbar {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    padding: 8px 12px;
+    text-transform: uppercase;
+    font-size: 16PX;
+  }
+  
+  .link-navbar::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #f0f0f0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+  
+  .link-navbar:hover::after {
+    transform: scaleX(1);
+  }
+
+#main {
+    width: 100%;
+    padding: 0 150px;
+    margin-top: 250px;
+}
+
+.main-sub {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+}
+
+.opinions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .opinions-avatars {
+    display: flex;
+  }
+  
+  .opinions-avatars img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid white;
+    object-fit: cover;
+    margin-left: -10px;
+    user-select: none;
+  }
+  
+  .opinions-avatars img:first-child {
+    margin-left: 0;
+  }
+  
+  .textOpinions {
+    background-color: #cacacaa8;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: inherit;
+    user-select: none;
+  }
+
+.main-content {
+    width: 50%;
+}
+
+.descriptionMain {
+    margin-top: 20px;
+}
+
+.descriptionMain::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    z-index: -1;
+  }
+
+.descriptionMain h1 {
+    font-size: 50px;
+    font-weight: 900;
+}
+
+.titleColoration {
+    color: #04ac9b;
+}
+
+.descriptionMain p {
+    font-size: 8px;
+    color: #f0f0f0d0;
+    margin-bottom: 20px;
+}
+
+.descriptionMain a {
+    background-color: #04ac9bc9;
+    border-radius: 8px;
+    padding: 8px 10px; 
+}
+
+
+
+.wsr {
+    mask-image: linear-gradient(
+        black 80%,
+        transparent
+    );
+}
+
+#hero {
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.hero-content h2 {
+    color: #ffffffe8;
+    font-size: 25px;
+}
+
+.hero-content span {
+    color: #ffffffaf;
+}
+
+.services {
+    display: flex;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 200px;
+}
+
+.services-content {
+    width: 400px;
+    height: 250px;
+    color: #080808;
+    background-color: #a5a5a56e;
+    border-radius: 8px;
+    margin-left: 10px;
+    padding: 4px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.services-content h4 {
+    font-size: 20px;
+    color: #080808ee;
+}
+
+.services-content p {
+    font-size: 16px;
+    color: #080808;
+}
+
+.infoServices img {
+    width: 54px;
+    height: 54px;
+}
+
+.servicio1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-image: url('/src/mariachisss.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
