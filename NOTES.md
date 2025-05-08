@@ -1,0 +1,1 @@
+guardar en un algo el id de el menu que se abrira, por ejemplo, para "bocinas", el meiunu de fotos de bocinas, para cancionEnTV, m,enu de video de yotube de cancion en tv, y asi cuando se lehaga click se va a generar el contenido del m enu dinamicamente, asi no se hacen 4 OpenMenus, sino solo 1 y se reutiliza para todos los menus.
