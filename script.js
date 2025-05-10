@@ -24,16 +24,16 @@ bocinaMenuOpenIMG.addEventListener('click', () => {
   menuContentBento.innerHTML = `
   <div class="grid">
                         <div class="item1">
-                            <img src="/src/bocina1.jpg" alt="Imagen de una Bocina">
+                            <img src="/src/bocina1.webp" alt="Imagen de una Bocina">
                         </div>
                         <div class="item2">
-                            <img src="/src/bocina2.jpg" alt="Imagen de una Bocina">
+                            <img src="/src/bocina2.webp" alt="Imagen de una Bocina">
                         </div>
                         <div class="item3">
-                            <img src="/src/bocina3.jpg" alt="Imagen de una Bocina">
+                            <img src="/src/bocina3.webp" alt="Imagen de una Bocina">
                         </div>
                         <div class="item4">
-                            <img src="/src/bocina4.jpg" alt="Imagen de una Bocina">
+                            <img src="/src/bocina4.webp" alt="Imagen de una Bocina">
                         </div>
                     </div>
 `;
