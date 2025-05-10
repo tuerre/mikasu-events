@@ -10,13 +10,11 @@ Ten en cuenta que este proyecto es de código abierto y abierto a contribuciones
 
 # 🛠️ Tecnologías
 
-**--** [HTML](https://astro.build)
-***
-**--** [CSS](https://tailwindcss.com)
-***
-**--** [Vanilla Javascript](https://tailwindcss.com)
+- [HTML](https://astro.build)
+- [CSS](https://tailwindcss.com)
+- [Vanilla Javascript](https://tailwindcss.com)
 
-> Hecho sin frameworks ni librerias por requerimientos del maestro. ☹️
+> **Hecho sin frameworks ni librerias por requerimientos del maestro**. ☹️
 
 ## 🤝 Contribuciones
 
