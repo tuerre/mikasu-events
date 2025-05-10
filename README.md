@@ -1,4 +1,4 @@
-# 🌸 MIKASU ANIMATION EVENTS 🌸 - Sitio Web Oficial 2025
+# 🌸 MIKASU ANIMATION EVENTS 🌸 - Sitio Web Oficial
 
 Este proyecto es una simulación de una 'empresa' dedicada a la animación de eventos con mariachis, alquiler de bocinas y demás. Es parte de tantos proyectos de la carrera de Bachiller de Informática en Programación d [@Jendry Abreu](https://www.instagram.com/de1eonzz). Sitio web desarrollado con mucho amor por [tuerre](https://twitch.tv/midudev) (Jendry).
 ![banner](./src/site.webp)
