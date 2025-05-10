@@ -20,7 +20,7 @@ html {
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #1c1a19;
+    background-color: #38312e;
     color: #f0f0f0;
 }
 
@@ -801,6 +801,8 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 30px;
+    margin-top: 100px;
 }
 
 .container {
