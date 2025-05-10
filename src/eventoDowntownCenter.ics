@@ -1,0 +1,11 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Mikasu Animation Events//HTML Generator//ES
+BEGIN:VEVENT
+SUMMARY:Concierto en Downtown Center
+DESCRIPTION:Concierto de Mariachi Puro México RD en Downtown Center Gratis. Con invitados especiales y mucha diversión. No faltes.
+LOCATION:Av. José Núñez de Cáceres esq, Santo Domingo 10114
+DTSTART:20250820T180000Z
+DTEND:20250821T180000Z
+END:VEVENT
+END:VCALENDAR
