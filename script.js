@@ -10,6 +10,8 @@ const mothersDayMenuOpenIMG = document.getElementById('mothersDayMenuOpenIMG');
 
 const estadoCivilMenuOpenIMG = document.getElementById('estadoCivilMenuOpenIMG');
 
+const btnSupport = document.getElementById('btnSupport'); 
+
 function getScrollbarWidth() {
   return window.innerWidth - document.documentElement.clientWidth;
 }
@@ -504,4 +506,8 @@ document.addEventListener('DOMContentLoaded', function () {
       errorMessage.style.display = 'none';
     }
   }
+});
+
+btnSupport.addEventListener('click', () => {
+  alert('Para recibir ayuda escribenos al (+1 809-857-7000)');
 });
