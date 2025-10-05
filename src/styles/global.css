@@ -1,0 +1,13 @@
+
+  @font-face {
+  font-family: 'AnisetteBold';
+  src: url('/public/fonts/Anisette-Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+#animationByMikasu, #countdown-title, #minutes, #hours, #seconds, #downloadCalendar-button {
+  font-family: 'AnisetteBold', sans-serif;
+}
+
+@import "tailwindcss";
