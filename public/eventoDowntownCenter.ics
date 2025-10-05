@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//PuroMexico//Evento//ES
+BEGIN:VEVENT
+UID:20260102T210000-001@infomikasu.com
+DTSTAMP:20260102T210000Z
+DTSTART;TZID=America/Santo_Domingo:20260102T210000
+DTEND;TZID=America/Santo_Domingo:20260103T020000
+SUMMARY:Puro México - Downtown Center
+DESCRIPTION:No te pierdas el evento Puro México en Downtown Center. ¡Música, comida y cultura mexicana te esperan!
+LOCATION:Downtown Center, Santo Domingo, República Dominicana
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR
