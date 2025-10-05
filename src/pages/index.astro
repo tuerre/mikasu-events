@@ -1,0 +1,1044 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="Mikasu Animation Events - Agencia de Animación de Eventos en Bonao, RD"
+>
+  <div
+    id="background"
+    class="absolute inset-0 -z-10 h-[170vh] bg-cover bg-center"
+    style="background-image: url('/images/background.webp')"
+  >
+  </div>
+
+  <header
+    class="fixed top-0 left-0 w-full h-[55px] flex justify-center items-center px-2 backdrop-blur-sm border-b border-gray-700 z-50"
+  >
+    <nav id="navbar" class="flex">
+      <ul class="flex gap-5">
+        <li class="hidden lg:inline">
+          <a href="#" class="group inline-block px-3 py-2 uppercase text-sm">
+            <span>Inicio</span>
+            <span
+              class="block h-[2px] bg-white scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"
+            ></span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#hero"
+            class="group inline-block px-3 py-2 uppercase text-sm"
+          >
+            <span>Información</span>
+            <span
+              class="block h-[2px] bg-white scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"
+            ></span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#photosYVideosOfEvents"
+            class="group inline-block px-3 py-2 uppercase text-sm"
+          >
+            <span>Multimedia</span>
+            <span
+              class="block h-[2px] bg-white scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"
+            ></span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#testimonials"
+            class="group inline-block px-3 py-2 uppercase text-sm"
+          >
+            <span>Testimonios</span>
+            <span
+              class="block h-[2px] bg-white scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"
+            ></span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="#contact"
+            class="group inline-block px-3 py-2 uppercase text-sm"
+          >
+            <span>Contacto</span>
+            <span
+              class="block h-[2px] bg-white scale-x-0 origin-left transition-transform duration-300 group-hover:scale-x-100"
+            ></span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" class="w-full mt-[150px]">
+    <div class="main-sub flex px-28 lg:px-[150px]">
+      <div class="main-content relative">
+        <div class="opinions flex items-center gap-2 mb-4">
+          <div class="opinions-avatars flex -space-x-2">
+            <img
+              src="/images/pfp1.webp"
+              alt="Opinión de usuario"
+              class="w-8 h-8 rounded-full border-2 border-white object-cover select-none"
+            />
+            <img
+              src="/images/pfp2.webp"
+              alt="Opinión de usuario"
+              class="w-8 h-8 rounded-full border-2 border-white object-cover select-none"
+            />
+            <img
+              src="/images/pfp3.webp"
+              alt="Opinión de usuario"
+              class="w-8 h-8 rounded-full border-2 border-white object-cover select-none"
+            />
+            <img
+              src="/images/pfp4.webp"
+              alt="Opinión de usuario"
+              class="w-8 h-8 rounded-full border-2 border-white object-cover select-none"
+            />
+          </div>
+          <div
+            class="textOpinions bg-white/70 text-black rounded-full px-3 py-1 text-sm select-none"
+          >
+            +533 opiniones
+          </div>
+        </div>
+
+        <div class="w-full descriptionMain mt-5">
+          <h1 class="text-[35px] lg:text-[50px] font-extrabold">
+            LA MEJOR AGENCIA DE <br class="hidden lg:inline" />
+            EVENTOS EN <span class="text-[#04ac9b]">ERREDE</span>
+          </h1>
+
+          <p class="mt-4 text-[15px] text-white/80">
+            Contamos con multiples servicios de Animación de Eventos <span
+              class="font-semibold text-[#04ac9b]">mikasu</span
+            > en toda República Dominicana,
+            <br class="hidden lg:inline" /> asimismo con los mejores precios del mercado.
+          </p>
+
+          <a
+            href="#hero"
+            class="inline-block mt-6 bg-[#04ac9b] bg-opacity-80 rounded-md px-3 py-2"
+            >Explora nuestros servicios</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <section
+    id="hero"
+    class="w-full flex flex-col items-center justify-center mt-32 mb-20"
+  >
+    <div class="hero-content flex flex-col items-center mb-8">
+      <h2 class="text-white font-bold text-[25px]">Los servicios más buscados</h2>
+      <span class="text-white/70"
+        >Recomendados por más de 4 millones de usuarios</span
+      >
+    </div>
+
+    <div id="servicios" class="services max-w-full lg:max-w-7xl flex flex-col lg:flex-row justify-evenly gap-6">
+      <div
+        class="services-content w-[500px] bg-white/10 text-black rounded-lg p-5 flex flex-col items-center text-center"
+      >
+        <div class="infoServices">
+          <div class="w-full flex justify-center">
+            <img src="/images/mariachi.webp" alt="Guitarra" class="w-[54px] h-[54px]" />
+          </div>
+          <h4 class="mt-3 text-[18px] text-white/80 font-medium">Mariachis en vivo</h4>
+          <p class="mt-2 text-[16px] text-white/70">
+            Mariachis en vivo y en directo para entretener al repertorio en
+            cumpleaños, festividades y todo tipo de eventos
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="services-content w-[500px] bg-white/10 text-black rounded-lg p-5 flex flex-col items-center text-center"
+      >
+        <div class="infoServices">
+          <div class="w-full flex justify-center">
+            <img src="/images/violin.webp" alt="Balada" class="w-[54px] h-[54px]" />
+          </div>
+          <h4 class="mt-3 text-[18px] text-white/80 font-medium">Baladas</h4>
+          <p class="mt-2 text-[16px] text-white/70">
+            Baladas románticas y nostálgicas para ambientar tus celebraciones
+            con emoción, elegancia y un toque clásico inolvidable.
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="services-content w-[500px] bg-white/10 text-black rounded-lg p-5 flex flex-col items-center text-center"
+      >
+        <div class="infoServices">
+          <div class="w-full flex justify-center">
+            <img src="/images/micro.webp" alt="Mircrofono de Karaoke" class="w-[54px] h-[54px]" />
+          </div>
+          <h4 class="mt-3 text-[18px] text-white/80 font-medium">Karaokes energéticos</h4>
+          <p class="mt-2 text-[16px] text-white/70">
+            Otro tipo de evento con Karaokes energéticos, música bailable, alegría caribeña y energía contagiosa.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+
+
+  <section id="photosYVideosOfEvents" class="w-full bg-[#1c1a19] mt-20 pb-20">
+    <div class="bg-mediaSection pt-12">
+      <div class="allItemsSection flex flex-col lg:flex-row items-center justify-center gap-12">
+        <div class="firstSectionInfo flex flex-col items-center justify-center">
+          <span class="text-[#04ac9b] text-lg font-medium"
+            >Multimedia de nuestros eventos</span
+          >
+          <h3 class="text-3xl text-white font-bold mt-2">Los mejores en esto!</h3>
+          <img
+            src="/favicon.png"
+            alt="Mikasu Logo"
+            width="120"
+            height="120"
+            class="mt-2"
+          />
+        </div>
+
+        <div class="lastSectionMedia grid grid-cols-1 lg:grid-cols-2 gap-5">
+          <div
+            id="card1"
+            data-modal="sonidosBento"
+            class="mediaItem bg-[#2d2926] rounded-lg p-8 overflow-hidden"
+          >
+            <div class="titleCardItem flex items-start gap-3">
+              <!-- icon -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="text-amber-500"
+              >
+                <rect width="7" height="7" x="14" y="3" rx="1"></rect>
+                <path
+                  d="M10 21V8a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1H3"
+                ></path>
+              </svg>
+              <h4 class="text-lg font-semibold text-white">
+                Nuestros equipos de sonido
+              </h4>
+            </div>
+            <div class="mediaItemImage mt-6 h-[200px]">
+              <img
+                src="/images/BOCINA.webp"
+                alt="Mariachis en vivo"
+                class="w-full h-full rounded-md object-cover opacity-70 hover:opacity-100 cursor-pointer select-none"
+                id="bocinaMenuOpenIMG"
+              />
+            </div>
+          </div>
+
+          <div
+            id="card2"
+            data-modal="wilsonPorTVIframe"
+            class="mediaItem bg-[#2d2926] rounded-lg p-8 overflow-hidden"
+          >
+            <div class="titleCardItem flex items-start gap-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="text-amber-500"
+              >
+                <path d="M3 3v16a2 2 0 0 0 2 2h16"></path>
+                <path d="m19 9-5 5-4-4-3 3"></path>
+              </svg>
+              <h4 class="text-lg font-semibold text-white">
+                Wilson Soto por TV
+              </h4>
+            </div>
+            <div class="mediaItemImage mt-6 h-[200px]">
+              <img
+                src="/images/mariachiEnTV.webp"
+                alt="Mariachis en vivo"
+                class="w-full h-full rounded-md object-cover opacity-70 hover:opacity-100 cursor-pointer select-none"
+                id="wsrPorTVMenuOpenIMG"
+              />
+            </div>
+          </div>
+
+          <div
+            id="card3"
+            data-modal="mpmMusicIframe"
+            class="mediaItem bg-[#2d2926] rounded-lg p-8 overflow-hidden"
+          >
+            <div class="titleCardItem flex items-start gap-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="text-amber-500"
+              >
+                <path
+                  d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"
+                ></path>
+                <path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"></path>
+              </svg>
+              <h4 class="text-lg font-semibold text-white">
+                Estado civil - Mariachi Puro México
+              </h4>
+            </div>
+            <div class="mediaItemImage mt-6 h-[200px]">
+              <img
+                src="/images/portadaPuroMexico.webp"
+                alt="Mariachis en vivo"
+                class="w-full h-full rounded-md object-cover opacity-70 hover:opacity-100 cursor-pointer select-none"
+                id="estadoCivilMenuOpenIMG"
+              />
+            </div>
+          </div>
+
+          <div
+            id="card4"
+            data-modal="jetSetBento"
+            class="mediaItem bg-[#2d2926] rounded-lg p-8 overflow-hidden"
+          >
+            <div class="titleCardItem flex items-start gap-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="text-amber-500"
+              >
+                <path
+                  d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"
+                ></path>
+              </svg>
+              <h4 class="text-lg font-semibold text-white">
+                Dia de las Madres - Puro México
+              </h4>
+            </div>
+            <div class="mediaItemImage mt-6 h-[200px]">
+              <img
+                src="/images/mariachisss.webp"
+                alt="Mariachis en vivo"
+                class="w-full h-full rounded-md object-cover opacity-70 hover:opacity-100 cursor-pointer select-none"
+                id="mothersDayMenuOpenIMG"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- menu flotante (overlay) -->
+      <div
+        id="menuFlotanteCard"
+        class="menuFlotanteCard fixed inset-0 bg-black/40 hidden z-[9999]"
+      >
+        <div id="menuContentBento" class="absolute top-[10%] left-[20%]"></div>
+
+        <div class="closeMenuBtn absolute top-[10%] right-[10%]">
+          <button
+            id="closeMenuBtn"
+            class="flex items-center gap-2 text-gray-300 bg-transparent text-sm border-none"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="14"
+              class="z-10"
+              aria-hidden="true"
+              ><path
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M13 1 1 13M1 1l12 12"></path></svg
+            >
+            <span>Close <span class="text-xs">(Esc)</span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials" class="bg-[#282524a4] border-t border-b border-[#04ac9ba7] flex items-center justify-center w-full h-[70vh] py-[150px]">
+  <div class="testimonials-container max-w-[1200px] w-full text-center">
+    <div class="flex flex-col gap-2.5 w-full px-3 mb-[40px]">
+      <h3 class="testimonials-title text-[#04ac9b] text-[1.2rem]">Testimonios</h3>
+      <h2 class="testimonials-subtitle text-[2.5rem] font-bold text-white">
+      Escucha lo que dicen nuestros 1000+ clientes
+    </h2>
+    </div>
+
+    <div class="slider-container relative overflow-hidden px-[19px]">
+      <button
+        class="slider-button prev-button absolute top-1/2 -translate-y-1/2 left-[8px] bg-white/10 text-white w-[40px] h-[40px] rounded-full cursor-pointer flex justify-center items-center text-[1.5rem] z-10 hover:bg-white/20 transition"
+      >
+        &#10094;
+      </button>
+
+      <div id="testimonialSlider" class="slider flex transition-transform duration-500 ease-linear"></div>
+
+      <button
+        class="slider-button next-button absolute top-1/2 -translate-y-1/2 right-[20px] bg-white/10 text-white w-[40px] h-[40px] rounded-full cursor-pointer flex justify-center items-center text-[1.5rem] z-10 hover:bg-white/20 transition"
+      >
+        &#10095;
+      </button>
+    </div>
+  </div>
+</section>
+
+  <section
+    id="contact"
+    class="w-full bg-[#1c1a19] border-t border-[#38312e] pt-20"
+  >
+    <div
+      class="container max-w-[1200px] mx-auto flex gap-8 px-6 flex-col lg:flex-row"
+    >
+      <div class="contact-info flex-1">
+        <div class="flex flex-col lg:flex-row gap-8">
+          <div>
+            <h3 class="text-[#04ac9b] text-base mb-2 font-medium">
+            Contáctanos, en <span class="font-bold">Mikasu</span>
+          </h3>
+          <h3 id="animationByMikasu" class="text-3xl mb-4 font-anisette">Animamos de todo</h3>
+          <div class="mb-6 max-w-xl">
+            <p class="text-gray-400 text-base mb-6">
+            Siempre a la vanguardia para cualquier tipo de evento que necesite
+            diversión, compromiso, responsabiliad y profesionalismo.
+          </p>
+          </div>
+
+          <div class="contact-item flex items-start mb-4">
+            <div class="icon text-2xl mr-4">📍</div>
+            <div class="contact-text">
+              <strong>Mariachi Puro México</strong>
+              <p class="text-gray-400">
+                Creamos experiencias divertidas para tus fiestas.
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-item flex items-start mb-4">
+            <div class="icon text-2xl mr-4">📞</div>
+            <div class="contact-text">
+              <strong>Escríbenos</strong>
+              <p class="text-gray-400">+1 809-857-7000</p>
+            </div>
+          </div>
+
+          <div class="contact-item flex items-start mb-4">
+            <div class="icon text-2xl mr-4">✉️</div>
+            <div class="contact-text">
+              <strong>Envíanos un Mail</strong>
+              <p class="text-gray-400">puromexicord@gmail.com</p>
+            </div>
+          </div>
+
+          <div class="contact-item flex items-start mb-4">
+            <div class="icon text-2xl mr-4">🕒</div>
+            <div class="contact-text">
+              <strong>Contrataciones</strong>
+              <p class="text-gray-400">Todos los días para tí</p>
+              <p class="text-gray-400">A todas horas contigo</p>
+            </div>
+          </div>
+          </div>
+
+          <div class="contact-form flex-1 bg-[#111] p-6 rounded-lg">
+            <form
+              id="contactForm"
+              action="https://formspree.io/f/xyzwpqpa"
+              method="POST"
+              class="space-y-4"
+            >
+              <div class="form-row flex gap-4 flex-col md:flex-row">
+                <div class="form-group flex-1">
+                  <label for="firstName" class="block mb-2">Primer Nombre</label>
+                  <input
+                    type="text"
+                    name="primer_nombre"
+                    id="firstName"
+                    class="form-control w-full rounded-md px-3 py-2 bg-[#1a1a1a] text-white"
+                    placeholder="Madison"
+                    required
+                  />
+                  <span class="error-message text-red-500 text-sm hidden"
+                    >Este campo es obligatorio</span
+                  >
+                </div>
+
+                <div class="form-group flex-1">
+                  <label for="lastName" class="block mb-2">Segundo Nombre</label>
+                  <input
+                    type="text"
+                    name="segundo_nombre"
+                    id="lastName"
+                    class="form-control w-full rounded-md px-3 py-2 bg-[#1a1a1a] text-white"
+                    placeholder="Beer"
+                    required
+                  />
+                  <span class="error-message text-red-500 text-sm hidden"
+                    >Este campo es obligatorio</span
+                  >
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="block mb-2">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="form-control w-full rounded-md px-3 py-2 bg-[#1a1a1a] text-white"
+                  placeholder="madisonbeer@gmail.com"
+                  required
+                />
+                <span class="error-message text-red-500 text-sm hidden"
+                  >Este campo es obligatorio</span
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="subject" class="block mb-2">Tipo de evento</label>
+                <select
+                  id="subject"
+                  name="tipo_evento"
+                  class="form-control w-full rounded-md px-3 py-2 bg-[#1a1a1a] text-white appearance-none"
+                  required
+                >
+                  <option value="Fiesta XV">Fiesta de XV</option>
+                  <option value="Cumpleaños Traducional"
+                    >Cumpleaños tradicional</option
+                  >
+                  <option value="Concierto">Concierto (Tipo JetSet)</option>
+                  <option value="Otro">Otro</option>
+                </select>
+                <span class="error-message text-red-500 text-sm hidden"
+                  >Este campo es obligatorio</span
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="message" class="block mb-2">Mensaje extra</label>
+                <textarea
+                  id="message"
+                  name="mensaje"
+                  class="form-control w-full rounded-md px-3 py-2 bg-[#1a1a1a] text-white min-h-[120px]"
+                  placeholder="Ingresa aquí el mensaje..."
+                  required></textarea>
+                <span class="error-message text-red-500 text-sm hidden"
+                  >Este campo es obligatorio</span
+                >
+              </div>
+
+              <input type="text" name="_gotcha" style="display:none" />
+              <button
+                type="submit"
+                class="btn w-full py-3 bg-[#04ac9b] rounded-md font-bold"
+                >Enviar mensaje</button
+              >
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <footer
+      class="bg-[#1c1a19] text-white mt-12 pt-24 pb-8 border-t border-[#38312e]"
+    >
+      <div class="footer-container max-w-[1200px] mx-auto px-6">
+        <div class="footer-top flex flex-wrap justify-between gap-8 mb-6">
+          <div class="footer-brand min-w-[250px] flex-1">
+            <div class="footer-brand-logo flex items-center mb-4">
+              <img
+                src="/favicon.png"
+                alt="Mikasu Logo"
+                class="w-10 h-10 mr-3 select-none"
+              />
+              <h2 class="text-xl font-semibold">Mikasu Animation Events</h2>
+            </div>
+            <p class="text-gray-300 mb-4">
+              Buscando incentivar la actividad en tus festividades.
+            </p>
+            <div class="footer-buttons flex gap-4">
+              <a
+                href="#contact"
+                class="btn-invite inline-flex items-center bg-pink-300 text-black px-4 py-2 rounded-md"
+                >Contactar</a
+              >
+              <button
+                id="btnSupport"
+                class="btn-support inline-flex items-center text-white"
+                >Ayuda</button
+              >
+            </div>
+          </div>
+
+          <div class="footer-links flex flex-wrap gap-12">
+            <div class="footer-column min-w-[160px]">
+              <h3 class="font-semibold mb-3">Recursos</h3>
+              <ul>
+                <li>
+                  <a
+                    href="https://puromexico.blogspot.com/"
+                    target="_blank"
+                    class="text-gray-300">Blogspot</a
+                  >
+                </li>
+                <li><a href="#photosYVideosOfEvents" class="text-gray-300">Fotos</a></li>
+                <li>
+                  <a href="#testimonials" class="text-gray-300">Reseñas</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="footer-column min-w-[160px]">
+              <h3 class="font-semibold mb-3">Redes</h3>
+              <ul>
+                <li>
+                  <a
+                    href="https://www.instagram.com/puromexicord/"
+                    target="_blank"
+                    class="text-gray-300">Instagram</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.youtube.com/@mariachipuromexico2913"
+                    target="_blank"
+                    class="text-gray-300">YouTube</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.facebook.com/wilsonrafael.sotoroa"
+                    target="_blank"
+                    class="text-gray-300">Facebook</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="footer-column min-w-[160px]">
+              <h3 class="font-semibold mb-3">Legal</h3>
+              <ul>
+                <li>
+                  <a href="#" class="text-gray-300">Términos de uso</a>
+                </li>
+                <li>
+                  <a href="#" class="text-gray-300"
+                    >Política de privacidad</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="footer-bottom border-t border-black pt-4 text-center text-gray-400"
+        >
+          <p>
+            © Mikasu Animation Events, 2025, Todos los derechos reservados
+          </p>
+        </div>
+      </div>
+    </footer>
+  </section>
+  </Layout>
+
+<script type="module">
+    const menuFlotanteCard = document.getElementById('menuFlotanteCard');
+const closeMenuBtn = document.getElementById('closeMenuBtn');
+const menuContentBento = document.getElementById('menuContentBento');
+
+const bocinaMenuOpenIMG = document.getElementById('bocinaMenuOpenIMG');
+
+const wsrPorTVMenuOpenIMG = document.getElementById('wsrPorTVMenuOpenIMG');
+
+const mothersDayMenuOpenIMG = document.getElementById('mothersDayMenuOpenIMG');
+
+const estadoCivilMenuOpenIMG = document.getElementById('estadoCivilMenuOpenIMG');
+
+const btnSupport = document.getElementById('btnSupport'); 
+
+function getScrollbarWidth() {
+  return window.innerWidth - document.documentElement.clientWidth;
+}
+
+bocinaMenuOpenIMG.addEventListener('click', () => {
+  menuFlotanteCard.style.display = 'flex';
+  // document.body.style.overflowY = 'hidden';
+  const scrollWidth = getScrollbarWidth();
+  document.body.style.overflowY = 'hidden';
+  document.body.style.paddingRight = `${scrollWidth}px`;
+
+  menuContentBento.innerHTML = `
+  <div class="grid">
+                        <div class="item1">
+                            <img src="/images/bocina1.webp" alt="Imagen de una Bocina">
+                        </div>
+                        <div class="item2">
+                            <img src="/images/bocina2.webp" alt="Imagen de una Bocina">
+                        </div>
+                        <div class="item3">
+                            <img src="/images/bocina3.webp" alt="Imagen de una Bocina">
+                        </div>
+                        <div class="item4">
+                            <img src="/images/bocina4.webp" alt="Imagen de una Bocina">
+                        </div>
+                    </div>
+`;
+
+});
+
+wsrPorTVMenuOpenIMG.addEventListener('click', () => {
+  menuFlotanteCard.style.display = 'flex';
+  const scrollWidth = getScrollbarWidth();
+  document.body.style.overflowY = 'hidden';
+  document.body.style.paddingRight = `${scrollWidth}px`;
+
+  menuContentBento.innerHTML = `
+                        <div class="iframeYoutube">
+            <iframe id="wstPorTVVideoVideo"
+            style="border-radius: 10px;"
+            src="https://www.youtube.com/embed/uCoBv85xeVE?si=rAsq2DWaqAqYd1NI" 
+            title="Wilson Soto Roa por Televisión" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen></iframe>
+                    </div>
+`;
+
+  const wstPorTVVideoVideo = document.getElementById('wstPorTVVideoVideo');
+  if (wstPorTVVideoVideo) {
+    wstPorTVVideoVideo.pause();
+  }
+
+});
+
+mothersDayMenuOpenIMG.addEventListener('click', () => {
+  menuFlotanteCard.style.display = 'flex';
+  const scrollWidth = getScrollbarWidth();
+  document.body.style.overflowY = 'hidden';
+  document.body.style.paddingRight = `${scrollWidth}px`;
+
+  menuContentBento.innerHTML = `
+  <div class="mothersDayVideo">
+            <video id="motherDayVideoVideo" src="/images/diaDeLasMadresMARIACHIPUROMEXICORD.mp4" autoplay controls style="border-radius: 10px;">
+        </div>
+`;
+
+});
+
+estadoCivilMenuOpenIMG.addEventListener('click', () => {
+  menuFlotanteCard.style.display = 'flex';
+  const scrollWidth = getScrollbarWidth();
+  document.body.style.overflowY = 'hidden';
+  document.body.style.paddingRight = `${scrollWidth}px`;
+
+  menuContentBento.innerHTML = `
+                        <div class="iframeYoutube">
+            <iframe
+            style="border-radius: 10px;"
+            width="960px" 
+            height="700px" 
+            src="https://www.youtube.com/embed/pll56P4Xxpk?si=qUTW9uzaG6GaqBh1" 
+            title="Estado civil - by MPM" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen></iframe>
+                    </div>
+`;
+
+});
+
+closeMenuBtn.addEventListener('click', () => {
+  menuFlotanteCard.style.display = 'none';
+  document.body.style.overflowY = 'scroll';
+  document.body.style.paddingRight = '';
+
+  // Pausar el video si está presente en el DOM
+  const motherDayVideoVideo = document.getElementById('motherDayVideoVideo');
+  if (motherDayVideoVideo) {
+    motherDayVideoVideo.pause();
+  }
+
+  // Detener el iframe de YouTube si está presente en el DOM
+  const iframeYoutube = document.querySelector('.iframeYoutube iframe');
+  if (iframeYoutube) {
+    const iframeSrc = iframeYoutube.src;
+    iframeYoutube.src = '';
+    iframeYoutube.src = iframeSrc;
+  }
+});
+
+document.addEventListener('keydown', function (event) {
+  if (event.key === 'Escape') {
+    closeMenuBtn.click();
+  }
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Datos de los testimonios
+  const testimonials = [
+  {
+    text: '"Loco, lo de Mikasu fue otra liga. Ese mariachi con Wilson alante fue una maldita movie, hasta el vecino bajó a grabar."',
+    name: 'Carlos Rodríguez',
+    position: 'Diseñador Web'
+  },
+  {
+    text: '"Yo no sé qué brujería usan, pero Mikasu prendió el coro. Las bocinas, el mariachi... to’ el mundo gozando heavy."',
+    name: 'Ana Castillo',
+    position: 'Community Manager'
+  },
+  {
+    text: '"Muchacho, cuando Wilson empezó a cantar con ese mariachi fue pa’ llorar. Mikasu se la comió en mi cumpleaños."',
+    name: 'Pedro Mejía',
+    position: 'Analista de Datos'
+  },
+  {
+    text: '"Mikasu llegó, montó sus bocinas, afinó su vaina y ya tú sabes... Wilson soltó una ranchera y la doña casi se desmaya."',
+    name: 'Laura Peña',
+    position: 'Especialista en UX'
+  },
+  {
+    text: '"Yo dije: “Esto va a estar jevi”, pero Mikasu me dejó con la boca abierta. Ese show fue una vaina fuera de serie."',
+    name: 'Luis García',
+    position: 'Encargado de Sistemas'
+  },
+  {
+    text: '"Tú no has vivido na’ si no has tenido a Mikasu en tu party. Los mariachis, el sonido y Wilson... una bomba."',
+    name: 'Laura Sánchez',
+    position: 'Diseñadora UX/UI'
+  },
+  {
+    text: '"Oye, eso fue fuego puro. Mikasu montó su equipo y Wilson salió cantando como si fuera Vicente Fernández. El coro encendío."',
+    name: 'Manuel Jiménez',
+    position: 'Ingeniero de Software'
+  },
+  {
+    text: '"Yo reservé a Mikasu pa’ una sorpresa y terminamos armando una fiesta. El mariachi se robó el show, literal."',
+    name: 'Ana Martínez',
+    position: 'Gerente de Proyectos'
+  },
+  {
+    text: '"Mikasu tiene ese toque que uno busca: flow, puntualidad y un show que no se olvida. Wilson canta con el alma, de verdad."',
+    name: 'Yesenia Rosario',
+    position: 'Asistente de Marketing'
+  },
+  {
+    text: '"Esa gente no juega. Llegaron, montaron to’ en un dos por tres y cuando sonó el primer acorde, to’ el mundo en para."',
+    name: 'Elena Torres',
+    position: 'CEO'
+  }
+];
+
+
+  const sliderElement = document.getElementById('testimonialSlider');
+  const prevButton = document.querySelector('.prev-button');
+  const nextButton = document.querySelector('.next-button');
+
+  // Función para crear una tarjeta de testimonio
+  function createTestimonialCard(testimonial) {
+  const card = document.createElement('div');
+  card.className = 'testimonial-card flex-shrink-0 basis-[calc(33.333%-20px)] mx-[10px] bg-[#111111] rounded-lg p-[25px] text-left min-w-[300px] text-white';
+
+  const stars = document.createElement('div');
+  stars.className = 'stars text-[#04ac9b] text-[1.2rem] mb-[15px]';
+  stars.innerHTML = '★★★★★';
+
+  const text = document.createElement('p');
+  text.className = 'testimonial-text mb-[20px] leading-[1.6] text-white/90';
+  text.textContent = testimonial.text;
+
+  const author = document.createElement('div');
+  author.className = 'testimonial-author flex items-center';
+
+  const avatar = document.createElement('div');
+  avatar.className = 'author-avatar w-[40px] h-[40px] bg-[#1e8a7a] rounded-full flex justify-center items-center mr-[15px] text-white';
+  avatar.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z" fill="white"/><path d="M12.0002 14.5C6.99016 14.5 2.91016 17.86 2.91016 22C2.91016 22.28 3.13016 22.5 3.41016 22.5H20.5902C20.8702 22.5 21.0902 22.28 21.0902 22C21.0902 17.86 17.0102 14.5 12.0002 14.5Z" fill="white"/></svg>';
+
+  const info = document.createElement('div');
+  info.className = 'author-info flex flex-col';
+
+  const name = document.createElement('span');
+  name.className = 'author-name font-bold mb-[5px]';
+  name.textContent = testimonial.name;
+
+  const position = document.createElement('span');
+  position.className = 'author-position text-[0.9rem] opacity-80';
+  position.textContent = testimonial.position;
+
+  info.appendChild(name);
+  info.appendChild(position);
+
+  author.appendChild(avatar);
+  author.appendChild(info);
+
+  card.appendChild(stars);
+  card.appendChild(text);
+  card.appendChild(author);
+
+  return card;
+}
+
+
+  // Inicializar el slider
+  function initSlider() {
+    // Limpiar el slider
+    sliderElement.innerHTML = '';
+
+    // Crear copias adicionales para el efecto infinito
+    const allTestimonials = [...testimonials, ...testimonials, ...testimonials];
+
+    // Agregar todas las tarjetas al slider
+    allTestimonials.forEach(testimonial => {
+      sliderElement.appendChild(createTestimonialCard(testimonial));
+    });
+
+    // Posicionar el slider en el segundo conjunto de tarjetas
+    const cardWidth = document.querySelector('.testimonial-card').offsetWidth + 20; // Ancho + margen
+    const offset = testimonials.length * cardWidth;
+    sliderElement.style.transform = `translateX(-${offset}px)`;
+  }
+
+  // Variables para el control del slider
+  let currentIndex = testimonials.length; // Comenzamos en el segundo conjunto
+  let isTransitioning = false;
+
+  // Función para mover el slider
+  function moveSlider(direction) {
+    if (isTransitioning) return;
+
+    isTransitioning = true;
+    const cardWidth = document.querySelector('.testimonial-card').offsetWidth + 20; // Ancho + margen
+
+    if (direction === 'next') {
+      currentIndex++;
+    } else {
+      currentIndex--;
+    }
+
+    // Aplicar la transición
+    sliderElement.style.transition = 'transform 0.5s ease';
+    sliderElement.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+
+    // Verificar si necesitamos resetear la posición (efecto infinito)
+    setTimeout(() => {
+      if (currentIndex >= testimonials.length * 2) {
+        // Si llegamos al final del segundo conjunto, volvemos al inicio del segundo conjunto
+        currentIndex = testimonials.length;
+        sliderElement.style.transition = 'none';
+        sliderElement.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+      } else if (currentIndex <= 0) {
+        // Si llegamos al inicio del primer conjunto, vamos al final del primer conjunto
+        currentIndex = testimonials.length;
+        sliderElement.style.transition = 'none';
+        sliderElement.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+      }
+
+      isTransitioning = false;
+    }, 500);
+  }
+
+  // Event listeners para los botones
+  prevButton.addEventListener('click', () => moveSlider('prev'));
+  nextButton.addEventListener('click', () => moveSlider('next'));
+
+  // Inicializar el slider
+  initSlider();
+
+  // Ajustar el slider cuando cambia el tamaño de la ventana
+  window.addEventListener('resize', initSlider);
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.getElementById('contactForm');
+  const inputs = form.querySelectorAll('input, textarea, select');
+
+  // Validate on submit
+  form.addEventListener('submit', function (e) {
+    let isValid = true;
+
+    inputs.forEach(input => {
+      if (!input.value.trim()) {
+        e.preventDefault();
+        showError(input);
+        isValid = false;
+      } else {
+        hideError(input);
+      }
+    });
+
+    if (isValid) {
+      alert('Formulario enviado correctamente!');
+      form.reset();
+    }
+  });
+
+  // Validate on blur
+  inputs.forEach(input => {
+    input.addEventListener('blur', function () {
+      if (!this.value.trim()) {
+        showError(this);
+      } else {
+        hideError(this);
+      }
+    });
+
+    input.addEventListener('input', function () {
+      if (this.value.trim()) {
+        hideError(this);
+      }
+    });
+  });
+
+  function showError(input) {
+    input.classList.add('error');
+    const errorMessage = input.nextElementSibling;
+    if (errorMessage && errorMessage.classList.contains('error-message')) {
+      errorMessage.style.display = 'block';
+    }
+  }
+
+  function hideError(input) {
+    input.classList.remove('error');
+    const errorMessage = input.nextElementSibling;
+    if (errorMessage && errorMessage.classList.contains('error-message')) {
+      errorMessage.style.display = 'none';
+    }
+  }
+});
+
+btnSupport.addEventListener('click', () => {
+  alert('Para recibir ayuda escribenos al (+1 809-857-7000)');
+});
+  </script>
