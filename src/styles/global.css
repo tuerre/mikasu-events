@@ -6,7 +6,7 @@
   font-style: normal;
 }
 
-#animationByMikasu, #countdown-title, #minutes, #hours, #seconds, #downloadCalendar-button {
+#animationByMikasu, #countdown-title, #minutes, #hours, #seconds, #downloadCalendar-button, .mobile-menu-link {
   font-family: 'AnisetteBold', sans-serif;
 }
 
