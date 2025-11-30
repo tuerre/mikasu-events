@@ -13,11 +13,50 @@ import Layout from "../layouts/Layout.astro";
   </div>
 
   <header
-    class="fixed top-0 left-0 w-full h-[55px] flex justify-center items-center px-2 backdrop-blur-sm border-b border-gray-700 z-50"
+    class="fixed top-0 left-0 w-full h-[55px] flex justify-between items-center px-4 lg:justify-center lg:px-2 backdrop-blur-sm border-b border-gray-700 z-50"
   >
-    <nav id="navbar" class="flex">
+    <!-- Botón hamburguesa para mobile -->
+    <button
+      id="hamburgerBtn"
+      class="lg:hidden text-white focus:outline-none z-50"
+      aria-label="Menú"
+    >
+      <svg
+        id="hamburgerIcon"
+        class="w-6 h-6 transition-transform duration-300"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"
+        ></path>
+      </svg>
+      <svg
+        id="closeIcon"
+        class="w-6 h-6 hidden transition-transform duration-300"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M6 18L18 6M6 6l12 12"
+        ></path>
+      </svg>
+    </button>
+
+    <!-- Navbar desktop -->
+    <nav id="navbar" class="hidden lg:flex">
       <ul class="flex gap-5">
-        <li class="hidden lg:inline">
+        <li>
           <a href="#" class="group inline-block px-3 py-2 uppercase text-sm">
             <span>Inicio</span>
             <span
@@ -71,48 +110,109 @@ import Layout from "../layouts/Layout.astro";
         </li>
       </ul>
     </nav>
+
+    <!-- Menú móvil -->
+    <nav
+      id="mobileMenu"
+      class="fixed top-0 left-0 w-[40%] h-screen bg-[#1c1a19] backdrop-blur-sm transform -translate-x-full transition-transform duration-300 ease-in-out lg:hidden z-40"
+    >
+      <ul class="flex flex-col h-full pt-[55px]">
+        <li>
+          <a
+            href="#"
+            class="mobile-menu-link block px-6 py-4 uppercase text-sm text-white hover:bg-white/20 transition-colors font-anisette"
+            onclick="closeMobileMenu()"
+          >
+            Inicio
+          </a>
+        </li>
+        <li>
+          <a
+            href="#hero"
+            class="mobile-menu-link block px-6 py-4 uppercase text-sm text-white hover:bg-white/20 transition-colors font-anisette"
+            onclick="closeMobileMenu()"
+          >
+            Información
+          </a>
+        </li>
+        <li>
+          <a
+            href="#photosYVideosOfEvents"
+            class="mobile-menu-link block px-6 py-4 uppercase text-sm text-white hover:bg-white/20 transition-colors font-anisette"
+            onclick="closeMobileMenu()"
+          >
+            Multimedia
+          </a>
+        </li>
+        <li>
+          <a
+            href="#testimonials"
+            class="mobile-menu-link block px-6 py-4 uppercase text-sm text-white hover:bg-white/20 transition-colors font-anisette"
+            onclick="closeMobileMenu()"
+          >
+            Testimonios
+          </a>
+        </li>
+        <li>
+          <a
+            href="#contact"
+            class="mobile-menu-link block px-6 py-4 uppercase text-sm text-white hover:bg-white/20 transition-colors font-anisette"
+            onclick="closeMobileMenu()"
+          >
+            Contacto
+          </a>
+        </li>
+      </ul>
+    </nav>
   </header>
 
-  <main id="main" class="w-full mt-[150px]">
-    <div class="main-sub flex px-28 lg:px-[150px]">
-      <div class="main-content relative">
-        <div class="opinions flex items-center gap-2 mb-4">
+  <!-- Overlay para mobile -->
+  <div
+    id="mobileMenuOverlay"
+    class="fixed top-0 left-0 w-full h-full bg-black/80 backdrop-blur-sm opacity-0 invisible transition-opacity duration-300 lg:hidden z-30"
+    onclick="closeMobileMenu()"
+  ></div>
+
+  <main id="main" class="w-full mt-[80px] sm:mt-[100px] lg:mt-[150px]">
+    <div class="main-sub flex px-4 sm:px-6 md:px-8 lg:px-28 xl:px-[150px]">
+      <div class="main-content relative w-full">
+        <div class="opinions flex items-center gap-2 mb-4 flex-wrap">
           <div class="opinions-avatars flex -space-x-2">
             <img
               src="/images/pfp1.webp"
               alt="Opinión de usuario"
-              class="w-8 h-8 rounded-full border-2 border-white object-cover select-none"
+              class="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 rounded-full border-2 border-white object-cover select-none"
             />
             <img
               src="/images/pfp2.webp"
               alt="Opinión de usuario"
-              class="w-8 h-8 rounded-full border-2 border-white object-cover select-none"
+              class="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 rounded-full border-2 border-white object-cover select-none"
             />
             <img
               src="/images/pfp3.webp"
               alt="Opinión de usuario"
-              class="w-8 h-8 rounded-full border-2 border-white object-cover select-none"
+              class="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 rounded-full border-2 border-white object-cover select-none"
             />
             <img
               src="/images/pfp4.webp"
               alt="Opinión de usuario"
-              class="w-8 h-8 rounded-full border-2 border-white object-cover select-none"
+              class="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 rounded-full border-2 border-white object-cover select-none"
             />
           </div>
           <div
-            class="textOpinions bg-white/70 text-black rounded-full px-3 py-1 text-sm select-none"
+            class="textOpinions bg-white/70 text-black rounded-full px-2 sm:px-3 py-1 text-xs sm:text-sm select-none"
           >
             +533 opiniones
           </div>
         </div>
 
-        <div class="w-full descriptionMain mt-5">
-          <h1 class="text-[35px] lg:text-[50px] font-extrabold">
+        <div class="w-full descriptionMain mt-3 sm:mt-4 md:mt-5">
+          <h1 class="text-[24px] sm:text-[28px] md:text-[35px] lg:text-[50px] font-extrabold leading-tight">
             LA MEJOR AGENCIA DE <br class="hidden lg:inline" />
-            EVENTOS EN <span class="text-[#04ac9b]">ERREDE</span>
+            EVENTOS EN <span class="text-[#04ac9b]">REPÚBLICA DOMINICANA</span>
           </h1>
 
-          <p class="mt-4 text-[15px] text-white/80">
+          <p class="mt-3 sm:mt-4 text-[16px] text-white/80 leading-relaxed">
             Contamos con multiples servicios de Animación de Eventos <span
               class="font-semibold text-[#04ac9b]">mikasu</span
             > en toda República Dominicana,
@@ -120,8 +220,9 @@ import Layout from "../layouts/Layout.astro";
           </p>
 
           <a
-            href="#hero"
-            class="inline-block mt-6 bg-[#04ac9b] bg-opacity-80 rounded-md px-3 py-2"
+            id="servicesRedirect"
+            href="#servicesRedirect"
+            class="inline-block mt-4 sm:mt-5 md:mt-6 bg-[#04ac9b] bg-opacity-80 rounded-md px-3 sm:px-4 py-2 text-sm sm:text-base"
             >Explora nuestros servicios</a
           >
         </div>
@@ -130,25 +231,25 @@ import Layout from "../layouts/Layout.astro";
 
     <section
     id="hero"
-    class="w-full flex flex-col items-center justify-center mt-32 mb-20"
+    class="w-full flex flex-col items-center justify-center mt-12 sm:mt-16 md:mt-24 lg:mt-32 mb-12 sm:mb-16 md:mb-20 px-4 sm:px-6"
   >
-    <div class="hero-content flex flex-col items-center mb-8">
-      <h2 class="text-white font-bold text-[25px]">Los servicios más buscados</h2>
-      <span class="text-white/70"
-        >Recomendados por más de 4 millones de usuarios</span
+    <div class="hero-content flex flex-col items-center mb-6 sm:mb-8 text-center px-2">
+      <h2 class="text-white font-bold text-[20px] sm:text-[22px] md:text-[25px]">Los servicios más buscados</h2>
+      <span class="text-white/70 text-sm sm:text-base mt-1"
+        >Recomendados por más de 533 usuarios</span
       >
     </div>
 
-    <div id="servicios" class="services max-w-full lg:max-w-7xl flex flex-col lg:flex-row justify-evenly gap-6">
+    <div id="servicios" class="services w-full max-w-full lg:max-w-7xl flex flex-col lg:flex-row items-center justify-center lg:justify-evenly gap-4 sm:gap-5 md:gap-6 px-2">
       <div
-        class="services-content w-[500px] bg-white/10 text-black rounded-lg p-5 flex flex-col items-center text-center"
+        class="services-content w-full max-w-[400px] sm:max-w-[450px] md:max-w-[500px] lg:w-[500px] bg-white/10 text-black rounded-lg p-4 sm:p-5 flex flex-col items-center text-center"
       >
-        <div class="infoServices">
+        <div class="infoServices w-full">
           <div class="w-full flex justify-center">
-            <img src="/images/mariachi.webp" alt="Guitarra" class="w-[54px] h-[54px]" />
+            <img src="/images/mariachi.webp" alt="Guitarra" class="w-[45px] h-[45px] sm:w-[50px] sm:h-[50px] md:w-[54px] md:h-[54px]" />
           </div>
-          <h4 class="mt-3 text-[18px] text-white/80 font-medium">Mariachis en vivo</h4>
-          <p class="mt-2 text-[16px] text-white/70">
+          <h4 class="mt-3 text-[16px] sm:text-[17px] md:text-[18px] text-white/80 font-medium">Mariachis en vivo</h4>
+          <p class="mt-2 text-[14px] sm:text-[15px] md:text-[16px] text-white/70 leading-relaxed">
             Mariachis en vivo y en directo para entretener al repertorio en
             cumpleaños, festividades y todo tipo de eventos
           </p>
@@ -156,14 +257,14 @@ import Layout from "../layouts/Layout.astro";
       </div>
 
       <div
-        class="services-content w-[500px] bg-white/10 text-black rounded-lg p-5 flex flex-col items-center text-center"
+        class="services-content w-full max-w-[400px] sm:max-w-[450px] md:max-w-[500px] lg:w-[500px] bg-white/10 text-black rounded-lg p-4 sm:p-5 flex flex-col items-center text-center"
       >
-        <div class="infoServices">
+        <div class="infoServices w-full">
           <div class="w-full flex justify-center">
-            <img src="/images/violin.webp" alt="Balada" class="w-[54px] h-[54px]" />
+            <img src="/images/violin.webp" alt="Balada" class="w-[45px] h-[45px] sm:w-[50px] sm:h-[50px] md:w-[54px] md:h-[54px]" />
           </div>
-          <h4 class="mt-3 text-[18px] text-white/80 font-medium">Baladas</h4>
-          <p class="mt-2 text-[16px] text-white/70">
+          <h4 class="mt-3 text-[16px] sm:text-[17px] md:text-[18px] text-white/80 font-medium">Baladas</h4>
+          <p class="mt-2 text-[14px] sm:text-[15px] md:text-[16px] text-white/70 leading-relaxed">
             Baladas románticas y nostálgicas para ambientar tus celebraciones
             con emoción, elegancia y un toque clásico inolvidable.
           </p>
@@ -171,14 +272,14 @@ import Layout from "../layouts/Layout.astro";
       </div>
 
       <div
-        class="services-content w-[500px] bg-white/10 text-black rounded-lg p-5 flex flex-col items-center text-center"
+        class="services-content w-full max-w-[400px] sm:max-w-[450px] md:max-w-[500px] lg:w-[500px] bg-white/10 text-black rounded-lg p-4 sm:p-5 flex flex-col items-center text-center"
       >
-        <div class="infoServices">
+        <div class="infoServices w-full">
           <div class="w-full flex justify-center">
-            <img src="/images/micro.webp" alt="Mircrofono de Karaoke" class="w-[54px] h-[54px]" />
+            <img src="/images/micro.webp" alt="Mircrofono de Karaoke" class="w-[45px] h-[45px] sm:w-[50px] sm:h-[50px] md:w-[54px] md:h-[54px]" />
           </div>
-          <h4 class="mt-3 text-[18px] text-white/80 font-medium">Karaokes energéticos</h4>
-          <p class="mt-2 text-[16px] text-white/70">
+          <h4 class="mt-3 text-[16px] sm:text-[17px] md:text-[18px] text-white/80 font-medium">Karaokes energéticos</h4>
+          <p class="mt-2 text-[14px] sm:text-[15px] md:text-[16px] text-white/70 leading-relaxed">
             Otro tipo de evento con Karaokes energéticos, música bailable, alegría caribeña y energía contagiosa.
           </p>
         </div>
@@ -202,6 +303,7 @@ import Layout from "../layouts/Layout.astro";
             width="120"
             height="120"
             class="mt-2"
+            loading="lazy"
           />
         </div>
 
@@ -240,6 +342,7 @@ import Layout from "../layouts/Layout.astro";
                 alt="Mariachis en vivo"
                 class="w-full h-full rounded-md object-cover opacity-70 hover:opacity-100 cursor-pointer select-none"
                 id="bocinaMenuOpenIMG"
+                loading="lazy"
               />
             </div>
           </div>
@@ -275,6 +378,7 @@ import Layout from "../layouts/Layout.astro";
                 alt="Mariachis en vivo"
                 class="w-full h-full rounded-md object-cover opacity-70 hover:opacity-100 cursor-pointer select-none"
                 id="wsrPorTVMenuOpenIMG"
+                loading="lazy"
               />
             </div>
           </div>
@@ -312,6 +416,7 @@ import Layout from "../layouts/Layout.astro";
                 alt="Mariachis en vivo"
                 class="w-full h-full rounded-md object-cover opacity-70 hover:opacity-100 cursor-pointer select-none"
                 id="estadoCivilMenuOpenIMG"
+                loading="lazy"
               />
             </div>
           </div>
@@ -348,6 +453,7 @@ import Layout from "../layouts/Layout.astro";
                 alt="Mariachis en vivo"
                 class="w-full h-full rounded-md object-cover opacity-70 hover:opacity-100 cursor-pointer select-none"
                 id="mothersDayMenuOpenIMG"
+                loading="lazy"
               />
             </div>
           </div>
@@ -357,30 +463,32 @@ import Layout from "../layouts/Layout.astro";
       <!-- menu flotante (overlay) -->
       <div
         id="menuFlotanteCard"
-        class="menuFlotanteCard fixed inset-0 bg-black/40 hidden z-[9999]"
+        class="menuFlotanteCard fixed inset-0 bg-black/80 backdrop-blur-sm z-9999 flex items-center justify-center p-4 sm:p-6 md:p-8"
+        style="display: none;"
       >
-        <div id="menuContentBento" class="absolute top-[10%] left-[20%]"></div>
+        <div id="menuContentBento" class="relative w-full max-w-[90vw] sm:max-w-[85vw] md:max-w-[80vw] lg:max-w-[70vw] xl:max-w-[60vw] max-h-[90vh] overflow-y-auto"></div>
 
-        <div class="closeMenuBtn absolute top-[10%] right-[10%]">
+        <div class="closeMenuBtn fixed top-4 right-4 sm:top-6 sm:right-6 md:top-8 md:right-8 z-10000">
           <button
             id="closeMenuBtn"
-            class="flex items-center gap-2 text-gray-300 bg-transparent text-sm border-none"
+            class="flex items-center gap-2 text-white bg-black/50 hover:bg-black/70 backdrop-blur-sm rounded-full p-2 sm:p-3 text-xs sm:text-sm border-none transition-colors"
+            aria-label="Cerrar"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="14"
-              height="14"
-              class="z-10"
+              width="18"
+              height="18"
+              class="sm:w-5 sm:h-5"
               aria-hidden="true"
               ><path
                 fill="none"
                 stroke="currentColor"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                stroke-width="1.5"
+                stroke-width="2"
                 d="M13 1 1 13M1 1l12 12"></path></svg
             >
-            <span>Close <span class="text-xs">(Esc)</span></span>
+            <span class="hidden sm:inline">Close <span class="text-xs">(Esc)</span></span>
           </button>
         </div>
       </div>
@@ -688,6 +796,50 @@ const estadoCivilMenuOpenIMG = document.getElementById('estadoCivilMenuOpenIMG')
 
 const btnSupport = document.getElementById('btnSupport'); 
 
+// Menú hamburguesa mobile
+const hamburgerBtn = document.getElementById('hamburgerBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+const hamburgerIcon = document.getElementById('hamburgerIcon');
+const closeIcon = document.getElementById('closeIcon');
+
+function openMobileMenu() {
+  if (!mobileMenu || !mobileMenuOverlay) return;
+  mobileMenu.classList.remove('-translate-x-full');
+  mobileMenuOverlay.classList.remove('opacity-0', 'invisible');
+  mobileMenuOverlay.classList.add('opacity-100', 'visible');
+  if (hamburgerIcon) hamburgerIcon.classList.add('hidden');
+  if (closeIcon) closeIcon.classList.remove('hidden');
+  document.body.style.overflowY = 'hidden';
+}
+
+window.closeMobileMenu = function() {
+  if (!mobileMenu || !mobileMenuOverlay) return;
+  mobileMenu.classList.add('-translate-x-full');
+  mobileMenuOverlay.classList.remove('opacity-100', 'visible');
+  mobileMenuOverlay.classList.add('opacity-0', 'invisible');
+  if (hamburgerIcon) hamburgerIcon.classList.remove('hidden');
+  if (closeIcon) closeIcon.classList.add('hidden');
+  document.body.style.overflowY = '';
+};
+
+if (hamburgerBtn && mobileMenu) {
+  hamburgerBtn.addEventListener('click', () => {
+    if (mobileMenu.classList.contains('-translate-x-full')) {
+      openMobileMenu();
+    } else {
+      closeMobileMenu();
+    }
+  });
+}
+
+// Cerrar menú al presionar Escape (se maneja más abajo junto con el menú flotante)
+
+// Cerrar menú al hacer clic en overlay
+if (mobileMenuOverlay) {
+  mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+}
+
 function getScrollbarWidth() {
   return window.innerWidth - document.documentElement.clientWidth;
 }
@@ -700,18 +852,18 @@ bocinaMenuOpenIMG.addEventListener('click', () => {
   document.body.style.paddingRight = `${scrollWidth}px`;
 
   menuContentBento.innerHTML = `
-  <div class="grid">
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 md:gap-5">
                         <div class="item1">
-                            <img src="/images/bocina1.webp" alt="Imagen de una Bocina">
+                            <img src="/images/bocina1.webp" alt="Imagen de una Bocina" class="w-full h-auto rounded-lg object-cover">
                         </div>
                         <div class="item2">
-                            <img src="/images/bocina2.webp" alt="Imagen de una Bocina">
+                            <img src="/images/bocina2.webp" alt="Imagen de una Bocina" class="w-full h-auto rounded-lg object-cover">
                         </div>
                         <div class="item3">
-                            <img src="/images/bocina3.webp" alt="Imagen de una Bocina">
+                            <img src="/images/bocina3.webp" alt="Imagen de una Bocina" class="w-full h-auto rounded-lg object-cover">
                         </div>
                         <div class="item4">
-                            <img src="/images/bocina4.webp" alt="Imagen de una Bocina">
+                            <img src="/images/bocina4.webp" alt="Imagen de una Bocina" class="w-full h-auto rounded-lg object-cover">
                         </div>
                     </div>
 `;
@@ -725,14 +877,16 @@ wsrPorTVMenuOpenIMG.addEventListener('click', () => {
   document.body.style.paddingRight = `${scrollWidth}px`;
 
   menuContentBento.innerHTML = `
-                        <div class="iframeYoutube">
-            <iframe id="wstPorTVVideoVideo"
-            style="border-radius: 10px;"
-            src="https://www.youtube.com/embed/uCoBv85xeVE?si=rAsq2DWaqAqYd1NI" 
-            title="Wilson Soto Roa por Televisión" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
-            allowfullscreen></iframe>
+                        <div class="iframeYoutube w-full">
+            <div class="relative w-full" style="padding-bottom: 56.25%;">
+              <iframe id="wstPorTVVideoVideo"
+              class="absolute top-0 left-0 w-full h-full rounded-lg"
+              src="https://www.youtube.com/embed/uCoBv85xeVE?si=rAsq2DWaqAqYd1NI" 
+              title="Wilson Soto Roa por Televisión" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
+              allowfullscreen></iframe>
+            </div>
                     </div>
 `;
 
@@ -750,8 +904,8 @@ mothersDayMenuOpenIMG.addEventListener('click', () => {
   document.body.style.paddingRight = `${scrollWidth}px`;
 
   menuContentBento.innerHTML = `
-  <div class="mothersDayVideo">
-            <video id="motherDayVideoVideo" src="/images/diaDeLasMadresMARIACHIPUROMEXICORD.mp4" autoplay controls style="border-radius: 10px;">
+  <div class="mothersDayVideo w-full">
+            <video id="motherDayVideoVideo" src="/images/diaDeLasMadresMARIACHIPUROMEXICORD.mp4" autoplay controls class="w-full h-auto rounded-lg" style="max-height: 90vh;">
         </div>
 `;
 
@@ -764,22 +918,22 @@ estadoCivilMenuOpenIMG.addEventListener('click', () => {
   document.body.style.paddingRight = `${scrollWidth}px`;
 
   menuContentBento.innerHTML = `
-                        <div class="iframeYoutube">
-            <iframe
-            style="border-radius: 10px;"
-            width="960px" 
-            height="700px" 
-            src="https://www.youtube.com/embed/pll56P4Xxpk?si=qUTW9uzaG6GaqBh1" 
-            title="Estado civil - by MPM" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
-            allowfullscreen></iframe>
+                        <div class="iframeYoutube w-full">
+            <div class="relative w-full" style="padding-bottom: 56.25%;">
+              <iframe
+              class="absolute top-0 left-0 w-full h-full rounded-lg"
+              src="https://www.youtube.com/embed/pll56P4Xxpk?si=qUTW9uzaG6GaqBh1" 
+              title="Estado civil - by MPM" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
+              allowfullscreen></iframe>
+            </div>
                     </div>
 `;
 
 });
 
-closeMenuBtn.addEventListener('click', () => {
+function closeModalMenu() {
   menuFlotanteCard.style.display = 'none';
   document.body.style.overflowY = 'scroll';
   document.body.style.paddingRight = '';
@@ -791,17 +945,34 @@ closeMenuBtn.addEventListener('click', () => {
   }
 
   // Detener el iframe de YouTube si está presente en el DOM
-  const iframeYoutube = document.querySelector('.iframeYoutube iframe');
-  if (iframeYoutube) {
-    const iframeSrc = iframeYoutube.src;
-    iframeYoutube.src = '';
-    iframeYoutube.src = iframeSrc;
+  const iframeYoutube = document.querySelectorAll('.iframeYoutube iframe');
+  iframeYoutube.forEach(iframe => {
+    const iframeSrc = iframe.src;
+    iframe.src = '';
+    iframe.src = iframeSrc;
+  });
+}
+
+closeMenuBtn.addEventListener('click', closeModalMenu);
+
+// Cerrar modal al hacer clic en el overlay (pero no en el contenido)
+menuFlotanteCard.addEventListener('click', (e) => {
+  // Solo cerrar si se hace clic directamente en el overlay, no en el contenido
+  if (e.target === menuFlotanteCard) {
+    closeModalMenu();
   }
 });
 
 document.addEventListener('keydown', function (event) {
   if (event.key === 'Escape') {
-    closeMenuBtn.click();
+    // Cerrar menú móvil si está abierto
+    if (mobileMenu && !mobileMenu.classList.contains('-translate-x-full')) {
+      closeMobileMenu();
+    }
+    // Cerrar menú flotante si está abierto
+    if (menuFlotanteCard && menuFlotanteCard.style.display === 'flex') {
+      closeModalMenu();
+    }
   }
 });
 
