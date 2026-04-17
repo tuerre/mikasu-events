@@ -11,3 +11,4 @@ Ten en cuenta que este proyecto es de código abierto y abierto a contribuciones
 Este proyecto fué hecho en solitario por [Jendry Abreu](https://www.instagram.com/de1eonzz), Desarrollador de VelzioStudios y **commitiado desde otras maquinas y usuarios por si mismo**.
 
 tysm 4 read. happy coding! 💜
+commit pa la racha
